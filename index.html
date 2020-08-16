@@ -551,7 +551,7 @@
               <strong>Підпишіться на розсилку</strong>
             </div>
             <div class="email-subscription">
-              <div class="form-field">
+              <div class="form-subscription">
                 <form>
                   <input type="email" name="email" placeholder="E-mail" />
                 </form>
@@ -570,5 +570,44 @@
         </div>
       </div>
     </footer>
+
+    <!--Форма контакту з нами-->
+    <form class="form">
+      <h1>Залиште свої дані, ми Вам зателефонуємо</h1>
+
+      <div class="form-field">
+        <label for="name">Імя</label>
+        <input type="text" name="name" id="name" autofocus />
+      </div>
+
+      <div class="form-field">
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" />
+      </div>
+
+      <div class="form-field">
+        <label for="E-mail">Пошта</label>
+        <input type="email" name="E-mail" id="E-mail" />
+      </div>
+
+      <div class="form-field comment">
+        <label for="comment">Коментарі</label>
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="Введіть текст"
+        ></textarea>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" name="" id="" />
+        <label for=""
+          >Погоджуюся на розсилку і приймаю
+          <span><a href="#">Умови договору</a></span></label
+        >
+      </div>
+
+      <button type="submit">Відправити</button>
+    </form>
   </body>
 </html>
