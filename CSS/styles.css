@@ -673,6 +673,8 @@ strong {
   color: rgba(255, 255, 255, 0.6);
   background: #2f303a;
   padding: 16px 15px;
+
+  outline: none;
 }
 
 .form-subscription input::placeholder {
@@ -702,6 +704,8 @@ strong {
   border-width: 0px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* забирає обводку при натисканні */
+  outline: none;
 }
 
 /*-Кнопка футера-*/
@@ -955,16 +959,26 @@ width: 100%;
 }*/
 
 .form-field input {
-  padding: 14px 15px;
+  padding: 15px 42px;
   margin-top: 4px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field input:focus {
-  outline: 1px solid #2196f3;
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.form-field input:focus + .form-icon {
+  fill: #2196f3;
 }
 
 .form-field label {
@@ -978,15 +992,21 @@ width: 100%;
 
 .form-icon {
   position: absolute;
-  bottom: 20px;
-  /*top: 50%;
-  left: 12px;
+  /*bottom: 20px;*/
+  top: 70%;
+  left: 15px;
 
-  transform: translateY(-50%);*/
+  transform: translateY(-70%);
 
   display: inline-block;
   width: 18px;
   height: 18px;
+
+  fill: #212121;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field textarea {
@@ -999,6 +1019,10 @@ width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field textarea::placeholder {
@@ -1039,6 +1063,10 @@ width: 100%;
 
   border: 2px solid #212121;
   border-radius: 2px;
+
+  transition-property: background-image;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .checkbox-icon {
@@ -1060,6 +1088,11 @@ width: 100%;
   margin-left: 8.38px;
 }
 
+.consent-contract a {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
 .form button {
   display: flex;
   justify-content: center;
@@ -1076,6 +1109,7 @@ width: 100%;
   margin-right: auto;
   margin-bottom: 0;
 
+  outline: none;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
