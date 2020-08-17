@@ -573,11 +573,17 @@
 
     <!--Форма контакту з нами-->
     <form class="form">
+      <swg>
+        <use href="./images_studio/sprite.svg#close-black-18dp-1"></use>
+      </swg>
       <h1>Залиште свої дані, ми Вам зателефонуємо</h1>
 
       <div class="form-field">
         <label for="name">Імя</label>
         <input type="text" name="name" id="name" autofocus />
+        <svg class="form-icon">
+          <use href="./images_studio/sprite.svg#person-black-18dp-1"></use>
+        </svg>
       </div>
 
       <div class="form-field">
@@ -600,11 +606,14 @@
       </div>
 
       <div class="checkbox">
-        <input type="checkbox" name="" id="" />
-        <label for=""
+        <input type="checkbox" name="" id="consent" />
+        <label for="consent"
           >Погоджуюся на розсилку і приймаю
-          <span><a href="#">Умови договору</a></span></label
-        >
+          <span><a href="#">Умови договору</a></span>
+        </label>
+        <svg class="checkbox-icon">
+          <use href="./images_studio/sprite.svg#icon-check"></use>
+        </svg>
       </div>
 
       <button type="submit">Відправити</button>
