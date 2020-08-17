@@ -913,7 +913,7 @@ strong {
   width: 11px;
   height: 11px;
 
-  fill: #000000;
+  fill: Solid #000000;
 
   transition-property: fill;
   transition-duration: 250ms;
