@@ -878,19 +878,6 @@ strong {
 }
 
 /*-- Форма контакту з нами --*/
-.form h1 {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
-
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
 .form {
   width: 528px;
 
@@ -902,6 +889,22 @@ strong {
   padding: 40px 39px 40px 41px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.icon-close {
+}
+
+.form h1 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 textarea {
@@ -928,6 +931,10 @@ width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.form-field input:focus {
+  border: 1px solid #2196f3;
 }
 
 .form-field label {
@@ -981,20 +988,36 @@ width: 100%;
   align-items: center;
 }
 
-.checkbox input {
-  /*-webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+/* Visualy hidden */
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-  position: absolute;*/
-
+.checkbox-icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
 
+  border: 2px solid #212121;
   border-radius: 2px;
 }
 
-.checkbox label {
+.checkbox-input:checked + .checkbox-icon {
+  border: 2px solid #2196f3;
+  background-color: #2196f3;
+  background-image: url("../images_studio/icon-check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.consent-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -1003,21 +1026,6 @@ width: 100%;
   color: var(--third-text-color);
 
   margin-left: 8.38px;
-}
-
-.checkbox label::after {
-  content: "";
-  display: inline-block;
-
-  width: 16px;
-  height: 15px;
-
-  background-color: tomato;
-}
-
-.checkbox:checked + .checkbox label::after {
-  background-color: #2196f3;
-  border-radius: 2px;
 }
 
 .form button {
@@ -1036,11 +1044,11 @@ width: 100%;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border-color: #2196f3;
 
   font-weight: bold;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
