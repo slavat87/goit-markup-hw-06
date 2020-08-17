@@ -891,7 +891,23 @@ strong {
   margin-right: auto;
 }
 
+.close {
+  display: flex;
+
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
 .icon-close {
+  width: 11px;
+  height: 11px;
+
+  fill: #2196f3;
 }
 
 .form h1 {
