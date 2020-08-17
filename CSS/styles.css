@@ -907,6 +907,10 @@ strong {
   width: 11px;
   height: 11px;
 
+  fill: #000000;
+}
+
+.close:hover .icon-close {
   fill: #2196f3;
 }
 
