@@ -1005,7 +1005,7 @@ width: 100%;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field comment {
+.form-field.comment {
   margin-bottom: 20px;
 }
 
