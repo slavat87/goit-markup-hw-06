@@ -940,6 +940,8 @@ textarea {
 }
 
 .form-field {
+  position: relative;
+
   margin-bottom: 10px;
   margin-right: 32px;
   margin-left: 32px;
@@ -953,8 +955,6 @@ width: 100%;
 }*/
 
 .form-field input {
-  /*position: relative;*/
-
   padding: 14px 15px;
   margin-top: 4px;
 
@@ -978,6 +978,7 @@ width: 100%;
 
 .form-icon {
   position: absolute;
+  bottom: 20px;
   /*top: 50%;
   left: 12px;
 
