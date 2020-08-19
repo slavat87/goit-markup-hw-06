@@ -890,7 +890,7 @@ strong {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition-property: fill;
+  transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
