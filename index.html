@@ -45,8 +45,8 @@
 
           <div>
             <ul class="contact list">
-              <li data-open-form>
-                <a href="" class="link">
+              <li>
+                <a href="mailto:info@devstudio.com" class="link">
                   <svg class="icon-envelope">
                     <use href="./images_studio/sprite.svg#icon-envelope"></use>
                   </svg>
@@ -77,7 +77,7 @@
             для вашого бізнесу
           </h1>
           <div>
-            <button class="button list">Замовити послугу</button>
+            <button data-open-form class="button list">Замовити послугу</button>
           </div>
         </div>
       </section>
@@ -572,7 +572,7 @@
     </footer>
 
     <!--Форма контакту з нами-->
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-backdrop>
       <form class="form">
         <div data-close-form class="close">
           <svg class="icon-close">
@@ -634,25 +634,6 @@
     </div>
 
     <!--JS скрипт для відкривання і закривання модалки-->
-    <script>
-      const refs = {
-        openFormBtn: document.querySelector("[data-open-form]"),
-        closeFormBtn: document.querySelector("[data-close-form]"),
-        backdrop: document.querySelector("[data-backdrop]"),
-      };
-
-      refs.openFormBtn.addEventListener("click", toggleForm);
-      refs.closeFormBtn.addEventListener("click", toggleForm);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function toggleForm() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
-    </script>
+    <script src="./JS/modal.js"></script>
   </body>
 </html>
