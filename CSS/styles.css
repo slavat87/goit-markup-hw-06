@@ -920,6 +920,15 @@ strong {
   /*margin-top: 200px;*/
   margin-left: auto;
   margin-right: auto;
+
+  transition-property: fill;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden.form {
+transform: translateY(200px)
+opacity: 0;
 }
 
 .close {
