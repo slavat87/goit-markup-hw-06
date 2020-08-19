@@ -926,7 +926,7 @@ strong {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-hidden.form {
+.is-hidden form {
   transform: translate(-50%, -70%);
   opacity: 0;
 }
