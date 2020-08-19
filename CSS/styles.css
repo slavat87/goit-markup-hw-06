@@ -927,7 +927,7 @@ strong {
 }
 
 .is-hidden.form {
-  transform: translateY(200px);
+  transform: translate(-50%, -70%);
   opacity: 0;
 }
 
