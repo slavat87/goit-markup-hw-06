@@ -45,8 +45,8 @@
 
           <div>
             <ul class="contact list">
-              <li>
-                <a href="mailto:info@devstudio.com" class="link">
+              <li data-open-form>
+                <a href="" class="link">
                   <svg class="icon-envelope">
                     <use href="./images_studio/sprite.svg#icon-envelope"></use>
                   </svg>
@@ -572,57 +572,87 @@
     </footer>
 
     <!--Форма контакту з нами-->
-    <form class="form">
-      <div class="close">
-        <svg class="icon-close">
-          <use href="./images_studio/sprite.svg#icon-close-black"></use>
-        </svg>
-      </div>
-      <h1>Залиште свої дані, ми Вам зателефонуємо</h1>
+    <div class="backdrop is-hidden">
+      <form class="form">
+        <div data-close-form class="close">
+          <svg class="icon-close">
+            <use href="./images_studio/sprite.svg#icon-close-black"></use>
+          </svg>
+        </div>
+        <h1>Залиште свої дані, ми Вам зателефонуємо</h1>
 
-      <div class="form-field">
-        <label for="name">І'мя</label>
-        <input type="text" name="name" id="name" autofocus />
-        <svg class="form-icon">
-          <use href="./images_studio/sprite.svg#icon-person-black-18dp-1"></use>
-        </svg>
-      </div>
+        <div class="form-field">
+          <label for="name">І'мя</label>
+          <input type="text" name="name" id="name" autofocus />
+          <svg class="form-icon">
+            <use
+              href="./images_studio/sprite.svg#icon-person-black-18dp-1"
+            ></use>
+          </svg>
+        </div>
 
-      <div class="form-field">
-        <label for="tel">Телефон</label>
-        <input type="tel" name="tel" id="tel" />
-        <svg class="form-icon">
-          <use href="./images_studio/sprite.svg#icon-phone-black-18dp-1"></use>
-        </svg>
-      </div>
+        <div class="form-field">
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" />
+          <svg class="form-icon">
+            <use
+              href="./images_studio/sprite.svg#icon-phone-black-18dp-1"
+            ></use>
+          </svg>
+        </div>
 
-      <div class="form-field">
-        <label for="E-mail">Пошта</label>
-        <input type="email" name="E-mail" id="E-mail" />
-        <svg class="form-icon">
-          <use href="./images_studio/sprite.svg#icon-email-black-18dp-1"></use>
-        </svg>
-      </div>
+        <div class="form-field">
+          <label for="E-mail">Пошта</label>
+          <input type="email" name="E-mail" id="E-mail" />
+          <svg class="form-icon">
+            <use
+              href="./images_studio/sprite.svg#icon-email-black-18dp-1"
+            ></use>
+          </svg>
+        </div>
 
-      <div class="form-field comment">
-        <label for="comment">Коментарі</label>
-        <textarea
-          name="comment"
-          id="comment"
-          placeholder="Введіть текст"
-        ></textarea>
-      </div>
+        <div class="form-field comment">
+          <label for="comment">Коментарі</label>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Введіть текст"
+          ></textarea>
+        </div>
 
-      <label class="checkbox">
-        <input class="checkbox-input" type="checkbox" name="consent" />
-        <span class="checkbox-icon"></span>
-        <span class="consent-text"
-          >Погоджуюся на розсилку і приймаю
-          <span class="consent-contract"><a href="#">Умови договору</a></span>
-        </span>
-      </label>
+        <label class="checkbox">
+          <input class="checkbox-input" type="checkbox" name="consent" />
+          <span class="checkbox-icon"></span>
+          <span class="consent-text"
+            >Погоджуюся на розсилку і приймаю
+            <span class="consent-contract"><a href="#">Умови договору</a></span>
+          </span>
+        </label>
 
-      <button type="submit">Відправити</button>
-    </form>
+        <button type="submit">Відправити</button>
+      </form>
+    </div>
+
+    <!--JS скрипт для відкривання і закривання модалки-->
+    <script>
+      const refs = {
+        openFormBtn: document.querySelector("[data-open-form]"),
+        closeFormBtn: document.querySelector("[data-close-form]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openFormBtn.addEventListener("click", toggleForm);
+      refs.closeFormBtn.addEventListener("click", toggleForm);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleForm() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
